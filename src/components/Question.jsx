@@ -11,7 +11,7 @@ function Question({
     return <div>No question available</div>;
   }
 
-  const imagePath = `./assets/${question.media}`;
+  const imagePath = `../src/assets/images/${question.media}`;
 
   return (
     <div className="question-container">
