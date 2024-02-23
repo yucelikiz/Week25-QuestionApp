@@ -16,7 +16,6 @@ function Question({
   selectedOption,
   showOptions,
   handleOptionSelect,
-  currentQuestionIndex
 }) {
   //console.log("Current question prop:", question);
 

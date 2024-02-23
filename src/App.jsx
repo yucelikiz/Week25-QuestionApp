@@ -117,7 +117,6 @@ function App() {
             selectedOption={selectedOption}
             showOptions={showOptions && initialDelayPassed}
             handleOptionSelect={handleOptionSelect}
-            currentQuestionIndex={currentQuestionIndex}
           />
         </div>
       ) : (
