@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { questions } from "./data/data";
 import Question from "./components/Question";
 import Result from "./components/Result";
-import StartButton from "./components/StartButton";
 import "./App.css";
 
 function App() {
@@ -17,6 +16,9 @@ function App() {
   const [optionSelected, setOptionSelected] = useState(false);
   const [initialDelayPassed, setInitialDelayPassed] = useState(false);
   const [userAnswers, setUserAnswers] = useState([]);
+
+  //console.log("Current question index:", currentQuestionIndex);
+  //console.log("Questions data:", questions);
 
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -115,6 +117,7 @@ function App() {
             selectedOption={selectedOption}
             showOptions={showOptions && initialDelayPassed}
             handleOptionSelect={handleOptionSelect}
+            currentQuestionIndex={currentQuestionIndex}
           />
         </div>
       ) : (

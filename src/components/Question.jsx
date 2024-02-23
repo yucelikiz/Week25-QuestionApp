@@ -16,18 +16,21 @@ function Question({
   selectedOption,
   showOptions,
   handleOptionSelect,
+  currentQuestionIndex
 }) {
+  //console.log("Current question prop:", question);
+
   if (!question) {
     // If question is not available, return null or display a message
     return <div>No question available</div>;
   }
 
-  const imagePath = `../../public/images/${question.media}`;
+  const imagePath = `images/${question.media}`;
 
   return (
     <div className="question-container">
       <div className="image-container">
-        {question.media && <img src={imagePath} alt="Question Image" />}{" "}
+        {imagePath && <img src={imagePath} alt="Question Image" />}
         {/* Check if media exists before rendering the image */}
       </div>
       <div className="question-content">
